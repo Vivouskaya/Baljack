@@ -1,0 +1,56 @@
+<template name="tablePage">
+  <div class="tablePage">
+    <div class="left-top-score">
+      {{#each users}}
+        <div class="avatar-player-2">
+            <img class="player" src="/img/glasses.png" /><br/>
+            <p class="username">{{username}}</p>
+            {{> scorebar}}
+        </div>
+        <div class="card-location">
+          {{#each handsPlayed _id}}
+              {{>card}}
+          {{/each}}
+        </div>
+        <br/>
+        <br/>
+      {{/each}}
+    </div>
+    <div class="tableStyle1">
+    	<div class="outer-circle">
+        <!-- avatars & buttons -->
+        <div class="avatar-IA">
+          <img class="croupier" src="/img/woman.png" />
+          <div class="card-croupier-location">
+            {{#each handsCroupier}}
+                {{>card}}
+            {{/each}}
+          </div>
+        </div>
+        {{# if yourTurn}}
+        <div class="actions">
+          <button class="deal">hit</button>
+          <button class="done">stay</button>
+        </div>
+        {{/if}}
+        <!-- inner circle & Title table -->
+  		  <div class="inner-circle">
+  		  	<div>
+            <span> 
+              {{#if playerSelected}} {{ playerSelected.user.username }}'s Turn {{/if}}
+            </span>
+            <br/>
+            [ {{name}} ]
+          </div>
+  		  </div>
+		  </div>
+    </div>
+    <div class="right-top-score">
+      {{#if currentUserOnTable }}
+        <button class="standup">stand up</button>
+      {{ else }}
+        <button class="sit">sit down</button> 
+      {{/if}}
+    </div>
+  </div>
+</template>

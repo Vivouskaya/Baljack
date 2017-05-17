@@ -1,0 +1,279 @@
+/* CSS declarations go here */
+
+@font-face {
+  font-family: Gun;
+  src: url("/fonts/gun.ttf");
+ }
+
+.grid-block, .main, .table {
+  background: #fff;
+  border-radius: 3px;
+  padding: 5%;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
+
+  .tablePage {
+    background: #fff;
+    border-radius: 3px;
+    padding: 2%;
+    margin-bottom: 2%;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  }
+
+  .left-top-score {
+    position: absolute;
+    margin: 0 auto;
+  }
+
+  .right-top-score {
+    position: absolute;
+    left: 80%;
+    bottom: 90%;
+    font-family: Gun;
+    font-size: 1.5vw;
+  }
+
+  .right-top-player-selected {
+    position: absolute;
+    left: 88%;
+    font-family: Gun;
+  }
+
+  .tableStyle1 .outer-circle {
+   background: #191F1D;
+   border-radius: 50%;
+   margin: 0 auto;
+   width: 39vw;
+   padding-bottom: 39vw;
+   position: relative;
+   /*
+   border-style: solid;
+   border-color: grey;
+   */
+   /* 
+    Child elements with absolute positioning will be 
+    positioned relative to this div 
+   */
+ }
+ .tableStyle1 .inner-circle {
+   position: absolute;
+   background: #5BBF59;
+   border-radius: 50%;
+   height: 90%;
+   width: 90%;
+   /*
+    Put top edge and left edge in the center
+   */
+   top: 22%;
+   left: 22%;
+   margin: -17% 0% 0% -17%;
+   /* 
+    Offset the position correctly with
+    minus half of the width and minus half of the height 
+   */
+   border-style: inset;
+   border-color: green;
+   border-width: 2vw;
+ }
+
+ .avatar-IA {
+   position: absolute;
+   margin: 1% 0% 0% 44%;
+   z-index: 99; 
+ }
+
+ .croupier {
+   height: 6vw;
+   width: 6vw;
+   border-radius: 50%;
+ }
+
+ .avatar-player {
+   position: absolute;
+   margin: 85% 0% 0% 44%;
+   z-index: 99;
+ }
+
+ .avatar-player-2 {
+   display: inline-block;
+ }
+
+ .player {
+   height: 6vw;
+   width: 6vw;
+   border-radius: 50%;
+ }
+
+ .player-card-location {
+   position: absolute;
+   margin: 75% 0% 0% 44%;
+   z-index: 99;
+ }
+
+ .score {
+   font-size: 1.5vw;
+   display:block;
+   width: 35%;
+   border-radius: 100%;
+   text-align: center;
+   margin-left: 32%;
+ }
+
+ .grey {
+   background-color: #EEEEEE;
+ }
+
+ .green {
+   background-color: #5BBF59;
+ }
+
+ .red {
+   background-color: red;
+ }
+
+ .username {
+   font-family: Gun;
+   text-align: center;
+   display: block;
+ }
+
+ .actions {
+    position: absolute;
+    text-align:center;
+    font-family: Gun;
+    font-size: 2vw;
+    margin: 55% 0% 0% 37%;
+    z-index: 99;
+    height: 4vw;
+    width: 12vw;
+ }
+
+ .card-location {
+  display: inline-block;
+ }
+
+ .card {
+  float: right;
+  position: relative;
+  display: inline-block;
+  background-color: #F7F7F7;
+  height: 4.5vw;
+  width: 3vw;
+  border: outset 0.2vw;
+  border-color: red;
+  border-radius: 10%;
+  z-index: 99;
+ }
+
+ .inner-circle div {
+    float:left;
+    width:100%;
+    padding-top:50%;
+    line-height:1em;
+    margin-top:-1.75em;
+    text-align:center;
+    color:white;
+    font-family: Gun;
+    font-size: 4vw;
+    color: yellow;
+ }
+
+ .inner-circle div span {
+    font-size: 2.25vw;
+    color: white;
+ }
+
+body {
+  background: #eee;
+  color: #666666; }
+
+#main {
+  position: relative;
+}
+.page {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.navbar {
+  margin-bottom: 10px; }
+  /* line 32, ../sass/style.scss */
+  .navbar .navbar-inner {
+    border-radius: 0px 0px 3px 3px; }
+
+#spinner {
+  height: 300px; }
+
+
+.dropdown-menu span {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  line-height: 20px;
+  color: #bbb;
+  white-space: nowrap; }
+
+.load-more {
+  display: block;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.05);
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  margin-bottom: 10px; }
+  .load-more:hover {
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.1); }
+
+.tables .spinner-container{
+  position: relative;
+  height: 200px;
+}
+
+.jumbotron{
+  text-align: center;
+}
+.jumbotron h2{
+  font-size: 60px;
+  font-weight: 100;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {opacity: 0;}
+  10% {opacity: 1;}
+  90% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes fadeOut {
+  0% {opacity: 0;}
+  10% {opacity: 1;}
+  90% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.errors{
+  position: fixed;
+  z-index: 10000;
+  padding: 10px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  pointer-events: none;
+}
+.alert {
+          animation: fadeOut 2700ms ease-in 0s 1 forwards;
+  -webkit-animation: fadeOut 2700ms ease-in 0s 1 forwards;
+     -moz-animation: fadeOut 2700ms ease-in 0s 1 forwards;
+  width: 250px;
+  float: right;
+  clear: both;
+  margin-bottom: 5px;
+  pointer-events: auto;
+}
