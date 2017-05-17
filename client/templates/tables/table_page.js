@@ -56,9 +56,8 @@ Template.tablePage.helpers({
 Template.tablePage.events({
   'click .deal': function(e) {
   	var tableId = Router.current().params._id;
-    Meteor.call('dealCard', tableId, function(error, result) {
-      
-    });
+    var userId = Meteor.userId();
+    Meteor.call('dealCard', tableId, userId, function(error, result) {});
   },
   'click .done': function(e) {
     var tableId = Router.current().params._id;
